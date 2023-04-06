@@ -104,19 +104,14 @@ export default function Header(props) {
                 fontFamily: "monospace",
                 padding: "10px",
                 noWrap: {
-                  textOverflow: "Test",
+                  textOverflow: "clip",
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                 },
               }}
               className={classes.toolbarTitle}
             >
-              <img
-                src={Logo}
-                alt="wescodes.tech"
-                height="56px"
-                align="center"
-              />{" "}
+              <img src={Logo} alt="wescodes.tech" height="56px" align="right" />
               WesCodes.tech
             </Typography>
           </ThemeProvider>
@@ -146,7 +141,6 @@ export default function Header(props) {
           ))}
         </Toolbar>
       </AppBar>
-      <div className={classes.offset} />
       <div className={classes.offset} />
       <div className={classes.offset} />
     </React.Fragment>
