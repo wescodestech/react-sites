@@ -4,10 +4,11 @@ import { makeStyles, createMuiTheme } from "@material-ui/core/styles";
 import ThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import Logo from "../Images/icon.png";
-import Bg from "../Images/bg.jpeg";
+import IconButton from "@material-ui/core/IconButton";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import MenuIcon from "@material-ui/icons/Menu";
+import Logo from "../Images/header-logo.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -71,7 +72,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header(props) {
   const classes = useStyles();
-  const { sections } = props;
   const theme = createMuiTheme();
 
   theme.typography.h3 = {
@@ -84,64 +84,61 @@ export default function Header(props) {
     },
   };
 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleCloseHome = () => {
+    setAnchorEl(null);
+    props.history.push("/");
+  };
+  const handleCloseAbout = () => {
+    setAnchorEl(null);
+    props.history.push("/about");
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <React.Fragment>
       <AppBar
         position="fixed"
         style={{
-          background: "slategrey",
-          backgroundImage: `url(${Bg})`,
-          backgroundSize: "100%",
+          background: "rgb(47,57,72)",
         }}
       >
         <Toolbar className={classes.toolbar}>
           <ThemeProvider theme={theme}>
-            <Typography
-              variant="h3"
-              color="inherit"
-              align="center"
-              style={{
-                fontFamily: "monospace",
-                padding: "10px",
-                noWrap: {
-                  textOverflow: "clip",
-                  whiteSpace: "nowrap",
-                  overflow: "hidden",
-                },
-              }}
-              className={classes.toolbarTitle}
+            <img src={Logo} alt="wescodes.tech" height="56px" align="left" />
+
+            <IconButton
+              id="basic-button"
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={handleClick}
+              style={{ marginLeft: "auto" }}
             >
-              <img src={Logo} alt="wescodes.tech" height="56px" align="right" />
-              WesCodes.tech
-            </Typography>
+              <MenuIcon fontSize="large" style={{ color: "white" }} />
+            </IconButton>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "basic-button",
+              }}
+            >
+              <MenuItem onClick={handleCloseHome}>Home</MenuItem>
+              <MenuItem onClick={handleCloseHome}>Projects</MenuItem>
+              <MenuItem onClick={handleCloseAbout}>Connect</MenuItem>
+            </Menu>
           </ThemeProvider>
         </Toolbar>
-        <Toolbar
-          component="nav"
-          variant="dense"
-          className={classes.toolbarSecondary}
-        >
-          {sections.map((section) => (
-            <Button
-              focusRipple
-              focusVisibleClassName={classes.focusVisible}
-              key={section.title}
-              onClick={() => props.history.push(section.url)}
-              className={classes.image}
-              style={{
-                color: "whiteSmoke",
-                textTransform: "none",
-              }}
-              fullWidth
-            >
-              <span className={classes.imageBackdrop} />
-              <Typography variant="subtitle1">{section.title}</Typography>
-              <span className={classes.imageMarked} />
-            </Button>
-          ))}
-        </Toolbar>
       </AppBar>
-      <div className={classes.offset} />
       <div className={classes.offset} />
     </React.Fragment>
   );

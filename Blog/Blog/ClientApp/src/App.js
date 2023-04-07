@@ -20,9 +20,8 @@ function App() {
   return (
     <Router history={history}>
       <React.Fragment>
-        <div style={{ padding: "0.5em" }}>
+        <div>
           <Header title="Blog" sections={sections} history={history} />
-
           <Route path="/about" component={AboutPage} />
           <Route path="/blog/:id" component={Story} />
           <Route exact path="/" component={Blog} />

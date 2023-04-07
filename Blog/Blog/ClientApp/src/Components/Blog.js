@@ -7,27 +7,17 @@ import MainFeaturedPost from "./MainFeaturedPost";
 import FeaturedPost from "./FeaturedPost";
 import Sidebar from "./Sidebar";
 import { blog } from "../Content/BlogFeatured";
-import { FiCard, FiCardContent, FiCardMedia } from "./FullImageCard";
+import { FiCard, FiCardActions, FiCardMedia } from "./FullImageCard";
 import BackgroundImage from "../Images/background_motion.gif";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
+import Button from "@material-ui/core/Button";
+import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles((theme) => ({
-  mainGrid: {
-    marginTop: theme.spacing(3),
-  },
-  container: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-  },
   card: {
     maxWidth: "100%",
     height: 750,
-  },
-  media: {
-    height: 140,
   },
   fiCardContent: {
     color: "#ffffff",
@@ -45,7 +35,7 @@ const mainFeaturedPost = {
 };
 
 const sidebar = {
-  title: "About",
+  title: "wescodes.tech",
   description: blog.about,
   social: [
     {
@@ -67,23 +57,60 @@ export default function Blog(props) {
   return (
     <React.Fragment>
       <main>
-        {/* <FiCard
+        <FiCard
           className={classes.card}
-          style={{ border: "none", boxShadow: "none" }}
+          style={{ border: "none", boxShadow: "none", width: "100%" }}
           square={true}
         >
           <FiCardMedia media="picture" image={BackgroundImage} />
-          <FiCardContent className={classes.fiCardContent}>
-            <Typography variant="h1">Welcome! </Typography>
-            <Typography variant="body1">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </FiCardContent>
+          <FiCardActions className={classes.fiCardContent}>
+            <Container maxWidth="md">
+              <Grid container spacing={5}>
+                <Grid item xs={12} md={6}>
+                  <Button
+                    fullWidth
+                    color="inherit"
+                    variant="outlined"
+                    style={{ backgroundColor: "rgba(0,0,0,.75)" }}
+                  >
+                    <div style={{ padding: "2rem" }}>
+                      <Typography variant="h3">Projects</Typography>
+                      <p />
+                      <hr />
+                      <p />
+                      <Typography variant="body2">
+                        Technology • Software • Design
+                      </Typography>
+                    </div>
+                  </Button>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <Button
+                    fullWidth
+                    size="large"
+                    color="inherit"
+                    variant="outlined"
+                    style={{ backgroundColor: "rgba(0,0,0,.75)" }}
+                    onClick={() => props.history.push("/about")}
+                  >
+                    <div style={{ padding: "2rem" }}>
+                      <Typography variant="h3">Connect</Typography>
+                      <p />
+                      <hr />
+                      <p />
+                      <Typography variant="body2">
+                        Introduction • History • Contact
+                      </Typography>
+                    </div>
+                  </Button>
+                </Grid>
+              </Grid>
+            </Container>
+          </FiCardActions>
         </FiCard>
-        <p /> */}
-        <Container maxWidth="xl">
-          <MainFeaturedPost post={mainFeaturedPost} history={props.history} />
+        <p />
+        <Container maxWidth="lg">
+          {/* <MainFeaturedPost post={mainFeaturedPost} history={props.history} />
           <Grid container spacing={4}>
             {blog.posts.map((post) => (
               <FeaturedPost
@@ -92,10 +119,40 @@ export default function Blog(props) {
                 history={props.history}
               />
             ))}
-          </Grid>
+          </Grid> */}
+          <div style={{ padding: "4rem" }}>
+            <Container maxWidth="md">
+              <Grid container spacing={5} alignItems="center">
+                <Grid item xs={12} md={5}>
+                  <Typography
+                    align="right"
+                    variant="h2"
+                    style={{ fontFamily: "palatino" }}
+                  >
+                    MY
+                    <br />
+                    MISSION
+                  </Typography>
+                </Grid>
+                <Divider
+                  orientation="vertical"
+                  flexItem
+                  style={{ width: "8px" }}
+                />
+                <Grid item xs={12} md={6}>
+                  <Typography variant="h6" style={{ fontFamily: "helvetica" }}>
+                    TO UTILIZE TECHNOLOGY FOR GOOD BY CONNECTING PEOPLE TO THEIR
+                    WORLD, USING ENGINEERING PRINCIPLES TO SOLVE REAL-LIFE
+                    PROBLEMS, AND TO NEVER STOP LEARNING BY CONTINUOUSLY HONING
+                    MY CRAFT AND SKILLS IN THE LATEST TECHNOLOGICAL
+                    DEVELOPMENTS.
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Container>
+          </div>
           <Grid container spacing={12} className={classes.mainGrid}>
             <Sidebar
-              title={sidebar.title}
               description={sidebar.description}
               archives={sidebar.archives}
               social={sidebar.social}

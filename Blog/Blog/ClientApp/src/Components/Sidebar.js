@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
+import Logo from "../Images/header-logo-alt.png";
 
 const useStyles = makeStyles((theme) => ({
   sidebarAboutBox: {
@@ -18,16 +19,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Sidebar(props) {
   const classes = useStyles();
-  const { description, social, title } = props;
+  const { description, social } = props;
 
   return (
     <Grid item xs={12}>
       <Paper elevation={0} className={classes.sidebarAboutBox}>
-        <Typography align="center" variant="h6" gutterBottom>
-          {title}
-        </Typography>
+        <div align="center">
+          <img src={Logo} alt="wescodes.tech" height="75px" align="center" />
+        </div>{" "}
+        <br />
         <Typography align="center">{description}</Typography>
-
         <Typography
           variant="h6"
           gutterBottom

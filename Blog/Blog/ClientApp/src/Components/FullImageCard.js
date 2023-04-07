@@ -21,6 +21,8 @@ export const FiCardActionArea = withStyles({
 export const FiCardActions = withStyles({
   root: {
     position: "relative",
+    alignItems: "flex-end",
+    height: 725,
   },
 })(CardActions);
 

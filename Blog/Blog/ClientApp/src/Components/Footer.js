@@ -11,7 +11,7 @@ function Copyright() {
         <a href="https://wescodes.tech">https://wescodes.tech</a>
       </Typography>
       <Typography variant="body2" color="textSecondary" align="center">
-        Copyright © {new Date().getFullYear()}.
+        Copyright © {new Date().getFullYear()} • All Rights Reserved
       </Typography>
     </React.Fragment>
   );
@@ -50,11 +50,7 @@ export default function Footer(props) {
           align="center"
           color="textSecondary"
           component="p"
-        >
-          <a href="https://www.freepik.com/free-photos-vectors/background">
-            Background vector created by pikisuperstar - www.freepik.com
-          </a>
-        </Typography>
+        ></Typography>
       </Container>
     </footer>
   );
