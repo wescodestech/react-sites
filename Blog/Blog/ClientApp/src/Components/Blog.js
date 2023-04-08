@@ -62,6 +62,7 @@ export default function Blog(props) {
           <FiCardMedia>
             <video
               className="VideoTag"
+              playsInline
               autoPlay
               loop
               muted
@@ -151,7 +152,7 @@ export default function Blog(props) {
                 />
                 <Grid item xs={12} md={7}>
                   <Typography variant="h6" style={{ fontFamily: "helvetica" }}>
-                    TO UTILIZE TECHNOLOGY FOR GOOD BY CONNECTING PEOPLE TO THEIR
+                    TO UTILIZE TECHNOLOGY FOR GOOD, CONNECTING PEOPLE TO THEIR
                     WORLD, USING ENGINEERING PRINCIPLES TO SOLVE REAL-LIFE
                     PROBLEMS, AND TO NEVER STOP LEARNING BY CONTINUOUSLY HONING
                     MY CRAFT AND SKILLS IN THE LATEST TECHNOLOGICAL
