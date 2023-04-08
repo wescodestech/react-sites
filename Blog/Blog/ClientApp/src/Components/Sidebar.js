@@ -10,7 +10,7 @@ import Logo from "../Images/header-logo-alt.png";
 const useStyles = makeStyles((theme) => ({
   sidebarAboutBox: {
     padding: theme.spacing(2),
-    backgroundColor: theme.palette.grey[200],
+    backgroundColor: "rgb(231, 233, 235)",
   },
   sidebarSection: {
     marginTop: theme.spacing(3),
@@ -25,8 +25,8 @@ export default function Sidebar(props) {
     <Grid item xs={12}>
       <Paper elevation={0} className={classes.sidebarAboutBox}>
         <div align="center">
-          <img src={Logo} alt="wescodes.tech" height="75px" align="center" />
-        </div>{" "}
+          <img src={Logo} alt="wescodes.tech" height="65px" align="center" />
+        </div>
         <br />
         <Typography align="center">{description}</Typography>
         <Typography

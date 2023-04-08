@@ -133,7 +133,6 @@ export default function Header(props) {
               }}
             >
               <MenuItem onClick={handleCloseHome}>Home</MenuItem>
-              <MenuItem onClick={handleCloseHome}>Projects</MenuItem>
               <MenuItem onClick={handleCloseAbout}>Connect</MenuItem>
             </Menu>
           </ThemeProvider>

@@ -22,7 +22,7 @@ export const FiCardActions = withStyles({
   root: {
     position: "relative",
     alignItems: "flex-end",
-    height: 725,
+    height: "75%",
   },
 })(CardActions);
 
@@ -30,6 +30,7 @@ export const FiCardContent = withStyles({
   root: {
     position: "relative",
     backgroundColor: "transparent",
+    maxHeight: "25%",
   },
 })(CardContent);
 
