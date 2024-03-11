@@ -36,19 +36,19 @@ const sidebar = {
   description: blog.about,
   social: [
     {
-      name: "GitHub",
-      icon: GitHubIcon,
-      url: blog.github,
-    },
-    {
       name: "LinkedIn",
       icon: LinkedInIcon,
       url: blog.linkedIn,
     },
+    {
+      name: "GitHub",
+      icon: GitHubIcon,
+      url: blog.github,
+    },
   ],
 };
 
-export default function Blog(props) {
+export default function HomePage(props) {
   const classes = useStyles();
 
   return (
@@ -116,7 +116,7 @@ export default function Blog(props) {
                   onClick={() => props.history.push("/about")}
                 >
                   <div style={{ padding: "2rem" }}>
-                    <Typography variant="h4">Connect</Typography>
+                    <Typography variant="h5">Connect With Me</Typography>
                     <p />
                     <hr />
                     <p />
@@ -137,12 +137,16 @@ export default function Blog(props) {
                 <Grid item xs={12} md={4}>
                   <Typography
                     align="right"
-                    variant="h2"
-                    style={{ fontFamily: "palatino" }}
+                    variant="h4"
+                    style={{ fontFamily: "helvetica" }}
                   >
-                    MY
+                    SOFTWARE
                     <br />
-                    MISSION
+                    DEVELOPMENT
+                    <br />
+                    QUALITY
+                    <br />
+                    SECURITY
                   </Typography>
                 </Grid>
                 <Divider
@@ -152,11 +156,10 @@ export default function Blog(props) {
                 />
                 <Grid item xs={12} md={7}>
                   <Typography variant="h6" style={{ fontFamily: "helvetica" }}>
-                    TO UTILIZE TECHNOLOGY FOR GOOD, CONNECTING PEOPLE TO THEIR
-                    WORLD, USING ENGINEERING PRINCIPLES TO SOLVE REAL-LIFE
-                    PROBLEMS, AND TO NEVER STOP LEARNING BY CONTINUOUSLY HONING
-                    MY CRAFT AND SKILLS IN THE LATEST TECHNOLOGICAL
-                    DEVELOPMENTS.
+                    ALWAYS STRIVE TO UTILIZE TECHNOLOGY FOR GOOD, CONNECT PEOPLE
+                    TO THEIR WORLD, USE ENGINEERING PRINCIPLES TO SOLVE
+                    REAL-LIFE PROBLEMS, AND NEVER STOP LEARNING BY DEVELOPING
+                    SKILLS IN THE LATEST TECHNOLOGICAL DEVELOPMENTS.
                   </Typography>
                 </Grid>
               </Grid>

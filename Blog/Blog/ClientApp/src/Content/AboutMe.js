@@ -1,12 +1,11 @@
 export const aboutMe = {
   about: [
-    "Nice to meet you!",
-    "I'm a Software Engineer that focuses on driving the use of modern software technologies and architecture by using sound engineering principles to develop high quality, scalable, secure, and defect free software.",
-    "I'm a proven developer that has helped organizations scale concepts to production ready systems. Migrated and re-architect existing systems to scale and exponentially improve performance. Collaborated and established corporate processes and education to become more security aware and minded.",
-    "My professional interests lie in developing software using proven testing principles, Test Driven Development, promoting software architecture design, and testing code with high frequency in order to find and reduce risks and defects in live software.",
-    "I have varied technological interests running the gamut from full stack web development, modern application architecture, microservices, APIs, embedded programming, security, automation, and system design. If it requires building something to solve a problem, I'm all in.",
+    "I'm a Software Engineer who focuses on driving the development of software technologies and architecture by using sound engineering principles to develop quality, scalable, secure, and defect free software.",
+    "As a proven developer, I've helped organizations scale concepts to production ready systems. Migrated and re-architected systems to scale and exponentially improve security and performance. I've been responsible for establishing corporate processes and training for developers to become more security aware and minded.",
+    "My professional interests lie in developing software using proven testing principles, Test Driven Development, promoting architecture design, and testing code with high frequency in order to find and reduce risks and defects in live software.",
+    "My technological interests run the gamut from full stack web development, modern application architecture, microservices, APIs, embedded programming, security, automation, and system design. If it requires building something to solve a problem, I'm all in.",
     "I believe we all should be constant learners and always be willing to pick up new technologies, skills, and ideas quickly and making sure the best tools are used for the job at hand.",
-    "In my personal time I enjoy spending time with my family, photography, Texas Rangers baseball, and Dallas Cowboys football.",
+    "In my personal time I enjoy spending time with my family, photography and video media, The Oklahoma Sooners, Texas Rangers baseball, and Dallas Cowboys football.",
   ],
   contact: {
     email: "info -- wescodes.tech",
@@ -29,7 +28,7 @@ export const aboutMe = {
       title: "Launched This Site!",
       subTitle: "WesCodes.tech",
       description:
-        "The purpose of this site is to serve as a foundational stepping stone for developing a personal web platform.",
+        "The purpose of this site is to build foundational components to be used in a personal information sharing platform.",
       role: "Main Developer",
       date: "Summer 2020",
       current: true,
@@ -70,7 +69,7 @@ export const aboutMe = {
       logo: "ArcBLogo",
     },
     {
-      title: "Wes Photography",
+      title: "Wesley Howell Photography",
       subTitle: "",
       role: "Owner, Photographer",
       date: "2008 - 2012",

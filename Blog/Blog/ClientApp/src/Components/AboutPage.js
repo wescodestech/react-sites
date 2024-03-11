@@ -142,6 +142,7 @@ export default function Album() {
     return (
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
+        contentStyle={{ background: "#dfdfdf" }}
         iconStyle={{ background: "slategrey", color: "#fff" }}
         icon={<WorkIcon />}
       >
@@ -169,6 +170,7 @@ export default function Album() {
     return (
       <VerticalTimelineElement
         className="vertical-timeline-element--education"
+        contentStyle={{ background: "#dfdfdf" }}
         iconStyle={{ background: "darkred", color: "#fff" }}
         icon={<SchoolIcon />}
       >
